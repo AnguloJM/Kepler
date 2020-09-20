@@ -1,50 +1,79 @@
 ## Project Name
 
-The name of your project.
+Music-S
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Informative library that can retrieve wide range of data based on user input. Data can include books, movies, podcasts, music, music videos, audiobooks, and TV shows. 
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+```
+{
+    "resultCount": 1,
+    "results": [
+        {
+            "wrapperType": "track",
+            "kind": "song",
+            "artistId": 259760619,
+            "collectionId": 359966550,
+            "trackId": 359966562,
+            "artistName": "Sean Kingston & Justin Bieber",
+            "collectionName": "Eenie Meenie - Single",
+            "trackName": "Eenie Meenie",
+            "collectionCensoredName": "Eenie Meenie - Single",
+            "trackCensoredName": "Eenie Meenie",
+            "artistViewUrl": "https://music.apple.com/us/artist/sean-kingston/259760619?uo=4",
+            "collectionViewUrl": "https://music.apple.com/us/album/eenie-meenie/359966550?i=359966562&uo=4",
+            "trackViewUrl": "https://music.apple.com/us/album/eenie-meenie/359966550?i=359966562&uo=4",
+            "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/05/2f/d1/mzm.vlbwajpk.aac.p.m4a",
+            "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/e8/10/17/e8101796-28e0-0da6-4579-781a50dc84f3/source/30x30bb.jpg",
+            "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/e8/10/17/e8101796-28e0-0da6-4579-781a50dc84f3/source/60x60bb.jpg",
+            "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/e8/10/17/e8101796-28e0-0da6-4579-781a50dc84f3/source/100x100bb.jpg",
+            "collectionPrice": 1.29,
+            "trackPrice": 1.29,
+            "releaseDate": "2010-03-19T07:00:00Z",
+            "collectionExplicitness": "notExplicit",
+            "trackExplicitness": "notExplicit",
+            "discCount": 1,
+            "discNumber": 1,
+            "trackCount": 1,
+            "trackNumber": 1,
+            "trackTimeMillis": 201880,
+            "country": "USA",
+            "currency": "USD",
+            "primaryGenreName": "Pop",
+            "isStreamable": true
+        }
+    ]
+}
+```
 
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
-### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Allow user to retrieve data, based on their search
+- Bring back pictures realated to their search
+- Have a button to hear sample music when retreiving music 
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Have a recently searched tab
+- create a filter button to narrow search
+- Adjust app to also fit on mobile
 
-## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
+## Project Schedule  
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Sept 18-21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Sept 21| Project Approval | Incomplete
-|Sept 22| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Sept 23| MVP | Incomplete
+|Sept 21| Project plan/approval; Pseudocode functionality | Incomplete
+|Sept 22| Core App structure (HTML, CSS, JS) | Incomplete
+|Sept 23| Test/debug and complete Webpage | Incomplete
 |Sept 24| Post MVP/Styling | Incomplete
-|Sept 25| Presentations | Incomplete
+|Sept 25| Present | Incomplete
 
 ## Priority Matrix
 
@@ -52,15 +81,17 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Pseudocode | H | 2hrs| 0hrs | 0hrs |
+| CSS Styling | H | 12hrs| 0hrs | 0hrs |
+| JS functionality | H | 8hrs| 0hrs | 0hrs |
+| Post MVP work | H | 6hrs| 0hrs | 0hrs |
+| API functionality | H | 10hrs| 0hrs | 0hrs |
+| Debugging | H | 2hrs| 0hrs | 0hrs |
+| Total | H | 40hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
