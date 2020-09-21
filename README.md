@@ -4,7 +4,7 @@ Music-S
 
 ## Project Description
 
-Informative library that can retrieve wide range of data based on user input. Data can include books, movies, podcasts, music, music videos, audiobooks, and TV shows. 
+Informative library that can retrieve a wide range of data based on user input. Data can include books, movies, podcasts, music, videos, audiobooks, and TV shows. 
 
 ## API and Data Sample
 
@@ -71,13 +71,13 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 |---|---| ---|
 |Sept 21| Project plan/approval; Pseudocode functionality | Incomplete
 |Sept 22| Core App structure (HTML, CSS, JS) | Incomplete
-|Sept 23| Test/debug and complete Webpage | Incomplete
+|Sept 23| Complete Webpage and Test/debug | Incomplete
 |Sept 24| Post MVP/Styling | Incomplete
 |Sept 25| Present | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+Screen Shot 2020-09-20 at 8.21.08 PM
 
 ## Timeframes
 
