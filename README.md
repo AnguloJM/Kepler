@@ -8,6 +8,9 @@ Informative library that can retrieve a wide range of data based on user input. 
 
 ## API and Data Sample
 
+I am using an API that allows me to place search fields on my website to search for content within the iTunes Store and Apple Books Store.
+https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/
+
 ```
 {
     "resultCount": 1,
