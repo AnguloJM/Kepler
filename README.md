@@ -1,10 +1,10 @@
 ## Project Name
 
-Music-S
+Kepler
 
 ## Project Description
 
-Informative library that can retrieve a wide range of data based on user input. Data can include books, movies, podcasts, music, videos, audiobooks, and TV shows. 
+Informative library that can retrieve a wide range of data based on user input. Data can include books, movies, podcasts, music, videos, music videos, audiobooks, and TV shows. 
 
 ## API and Data Sample
 
@@ -51,12 +51,13 @@ Informative library that can retrieve a wide range of data based on user input. 
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+https://github.com/AnguloJM/Kepler/issues/2
 
 #### MVP 
 
 - Allow user to retrieve data, based on their search
 - Bring back pictures realated to their search
+- Second page where information is displated on cards
 - Have a button to hear sample music when retreiving music 
 
 #### PostMVP  
@@ -77,7 +78,7 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ## Priority Matrix
 
-https://github.com/AnguloJM/ProjectOne/issues/1
+https://github.com/AnguloJM/Kepler/issues/1
 
 ## Timeframes
 
