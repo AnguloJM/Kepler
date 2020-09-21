@@ -77,7 +77,7 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ## Priority Matrix
 
-Screen Shot 2020-09-20 at 8.21.08 PM
+![alt text](http://url/to/img.png)
 
 ## Timeframes
 
