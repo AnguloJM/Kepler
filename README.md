@@ -4,7 +4,7 @@ Kepler
 
 ## Project Description
 
-Informative library that can retrieve a wide range of data based on user input. Data can include books, movies, podcasts, music, videos, music videos, audiobooks, and TV shows. This application retrieves infromation based off of iTunes API database. 
+Informative library that can retrieve data based on user input. Data can include albums, artist, music, and music samples. 
 
 ## API and Data Sample
 
@@ -58,17 +58,17 @@ https://github.com/AnguloJM/Kepler/issues/2
 
 #### MVP 
 
-- Allow user to retrieve data, based on their search
-- Bring back pictures realated to their search
-- Second page where information is displated on cards
-- Have a button to hear sample music
+- Fuctional home page where users can search for an artist, album, or song
+- Display top rated searches on home page
+- On a second page, display result information on a cards
+- Have a button to hear sample music from results
 
 #### PostMVP  
 
-- create a "recently searched" tab
-- create a "filter" button to help specify searches
 - Adjust app to also fit on mobile
 - Add other search options
+- create a "filter" button to help specify searches
+- create a "recently searched" tab on home page
 
 ## Project Schedule  
 
