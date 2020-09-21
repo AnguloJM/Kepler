@@ -77,7 +77,7 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ## Priority Matrix
 
-![alt text](http://url/to/img.png)
+https://github.com/AnguloJM/ProjectOne/issues/1
 
 ## Timeframes
 
