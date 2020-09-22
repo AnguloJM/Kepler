@@ -9,8 +9,8 @@ async function fetchTopResult() {
     console.log(`Error: ${error}`);
   }
 }
-
 fetchTopResult();
+
 let resultDiv = document.querySelector("#top-searches");
 function showTopResult(datas) {
   let results = datas.map((data) => {
@@ -26,29 +26,39 @@ function showTopResult(datas) {
     artist.innerHTML = `${data.artistName}`;
     resultDiv.appendChild(artist);
 
-    // const playSample = document.createElement("AUDIO");
-    // playSample.setAttribute("controls", data.play(previewUrl));
-    // resultDiv.appendChild(playSample);
-    // // playSample.play();
+    const playSample = document.createElement("audio");
+    const source = document.createElement("source");
+    source.setAttribute("src", data.previewUrl);
+    playSample.setAttribute("controls", data.previewUrl);
+    playSample.appendChild(source);
+    resultDiv.appendChild(playSample);
   });
 
   return results;
 }
 
-async function fetchData(userInput) {
+const form = document.querySelector("#search-form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const inputValue = document.querySelector("#search").value;
+  document.querySelector("#search").value = "";
+  fetchData(inputValue);
+});
+
+async function fetchSearchData(userInput) {
   try {
     const url = `https://itunes.apple.com/search?media=music&term=${userInput}&limit=6`;
     const response = await axios.get(url);
-    console.log(response.data);
+    console.log(response.data.results);
   } catch (error) {
     console.log(`Error: ${error}`);
   }
 }
+fetchSearchData();
 
-// const form = document.querySelector("#search-form");
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   const inputValue = document.querySelector("#search").value;
-//   document.querySelector("#search").value = "";
-//   fetchData(inputValue);
-// });
+function removeResults() {
+  const appendElement = document.querySelector("#top-searches");
+  while (appendElement.lastChild) {
+    appendElement.removeChild(appendElement.lastChild);
+  }
+}
