@@ -66,11 +66,16 @@ h2 {
   margin: 0;
 }
 
-.content {
+#top-searches {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  box-sizing: content-box;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  width: 90%;
 }
 
 .contact-info {
