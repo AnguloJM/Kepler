@@ -20,14 +20,6 @@ input {
   width: 400px;
 }
 
-#click {
-  position: absolute;
-  right: 55px;
-  top: 75px;
-  background: transparent;
-  border: none;
-}
-
 article {
   width: 100%;
   max-width: 1300px;
@@ -90,6 +82,14 @@ li {
   display: inline;
   padding: 15px;
   font-size: 65px;
+}
+
+#click {
+  position: absolute;
+  right: 55px;
+  top: 75px;
+  background: transparent;
+  border: none;
 }
 
 #search {
