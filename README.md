@@ -60,7 +60,6 @@ https://github.com/AnguloJM/Kepler/issues/2
 
 - Fuctional home page where users can search for an artist, album, or song
 - Display top rated searches on home page
-- On a second page, display result information on a cards
 - Have a button to hear sample music from results
 
 #### PostMVP  
