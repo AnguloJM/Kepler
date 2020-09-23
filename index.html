@@ -7,6 +7,8 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="./script.js"></script>
   <link defer rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <title>Kepler</title>
 </head>
 
@@ -14,15 +16,16 @@
   <header>
     <h1>Kepler</h1>
     <form id="search-form">
-      <input type="text" id="search" placeholder="Magnifing Glass">
-      <button id="click">Search</button>
+      <input type="text" id="search" placeholder="Search">
+      <button type="submit" id="click"><i class="fa fa-search"></i></button>
     </form>
   </header>
   <main>
-    <article>
-      <h2>Top Rated:</h2>
-    </article>
-    <div id="top-searches"></div>
+    <div id="top-searches">
+      <div id="top-rated">
+        <h2>Top Rated:</h2>
+      </div>
+    </div>
   </main>
   <footer>
     <div class="bottom-logo">
@@ -30,8 +33,16 @@
       <p>Find all your media in one place</p>
     </div>
     <div class="contact-info">
-      <h3>Social Media</h3>
-      <h4>Contact Us</h4>
+      <ul>
+        <li id="github">
+          <a href="https://github.com/AnguloJM" target="_blank"> <i class="fa fa-github" aria-hidden="true"
+              style="color: #000000"></i></a>
+        </li>
+        <li id="linkedin">
+          <a href="https://www.linkedin.com/in/jairo-angulo-232370139?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1kILNLrSQROsAnlWPqRP9w%3D%3D"
+            target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: #000000"></i></a>
+        </li>
+      </ul>
     </div>
   </footer>
 

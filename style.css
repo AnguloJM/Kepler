@@ -5,13 +5,33 @@
 
 header {
   box-sizing: border-box;
-  padding: 50px;
+  padding: 25px;
   background: rgb(49, 187, 172);
   background: linear-gradient(
     180deg,
     rgba(49, 187, 172, 1) 0%,
     rgba(1, 245, 134, 1) 100%
   );
+}
+input {
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 35px;
+  width: 400px;
+}
+
+#click {
+  position: absolute;
+  right: 55px;
+  top: 75px;
+  background: transparent;
+  border: none;
+}
+
+article {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto 100px auto;
 }
 
 form {
@@ -32,7 +52,6 @@ footer {
 
 body {
   display: flex;
-  background: rgb(49, 187, 172);
   background: linear-gradient(
     180deg,
     rgba(49, 187, 172, 1) 0%,
@@ -45,11 +64,12 @@ body {
 header,
 footer {
   flex: 0 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
-  display: flex;
-  flex: 1;
   padding: 50px;
   box-sizing: border-box;
   background-color: #355058;
@@ -57,27 +77,90 @@ main {
 
 h1 {
   color: white;
+  font-size: 100px;
+  color: #243b42;
 }
 
 h2 {
   color: #00d16c;
+  font-size: 100px;
 }
+
+li {
+  display: inline;
+  padding: 15px;
+  font-size: 65px;
+}
+
+#search {
+  padding-left: 20px;
+}
+
 .search-form {
   margin: 0;
 }
 
 #top-searches {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   box-sizing: content-box;
   align-items: center;
   margin: 0 auto;
-  height: 100vh;
-  width: 90%;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1300px;
+}
+
+.top-rated-items {
+  width: 30%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 95px;
+  background: #0d1f25;
+  padding: 7px;
+  color: white;
+  border: 1px solid #00d16c;
+  border-radius: 10px;
+  box-shadow: 0 0 33px -5px rgba(0, 209, 108, 0.6), inset 0 0 0 1px #00d16c;
+}
+
+.top-rated-items img {
+  height: 100px;
+  width: 100px;
+}
+
+.searched-data {
+  width: 30%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 95px;
+  background: #0d1f25;
+  padding: 7px;
+  color: white;
+  border: 1px solid #00d16c;
+  border-radius: 10px;
+  box-shadow: 0 0 33px -5px rgba(0, 209, 108, 0.6), inset 0 0 0 1px #00d16c;
+}
+
+.searched-data img {
+  height: 100px;
+  width: 100px;
 }
 
 .contact-info {
   text-align: right;
+  padding: 20px;
+}
+
+#top-rated {
+  width: 100%;
+  padding-bottom: 75px;
 }
