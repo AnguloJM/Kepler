@@ -53,12 +53,11 @@ async function fetchSearchData(userInput) {
 
 let resultList = document.querySelector("#top-searches");
 function showSearchResults(datas) {
-  moreSearchResultsButton(); //width 100%
+  moreSearchResultsButton();
   childArray1.length = 0;
   count = 1;
   let results = datas.map((data) => {
     const newDiv = document.createElement("div");
-    // resultList.appendChild(newDiv);
     newDiv.classList = "searched-data";
 
     const image = document.createElement("img");
@@ -117,9 +116,9 @@ function moreSearchResultsButton() {
   newDiv.appendChild(button);
   button.addEventListener("click", (e) => {
     removeResults();
-    let loopInitial = 6 * count;
+    let loopInit = 6 * count;
     let loopEnd = 6 * (count + 1);
-    for (let i = loopInitial; i < loopEnd; i++) {
+    for (let i = loopInit; i < loopEnd; i++) {
       resultList.appendChild(childArray1[i]);
     }
     console.log(count);
