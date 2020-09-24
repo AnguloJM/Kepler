@@ -1,6 +1,6 @@
 async function fetchTopResult() {
   try {
-    const url = `https://itunes.apple.com/search?media=music&attribute=ratingIndex&limit=6`;
+    const url = `https://itunes.apple.com/search?media=music&attribute=ratingIndex&limit=60`;
     const response = await axios.get(url);
     const data = response.data.results;
     showTopResult(data);
@@ -12,9 +12,12 @@ fetchTopResult();
 
 let resultDiv = document.querySelector("#top-searches");
 function showTopResult(datas) {
+  moreTopRatedButton();
+  topRatedArray.length = 0;
+  topRatedCount = 1;
   let results = datas.map((data) => {
     const newDiv = document.createElement("div");
-    resultDiv.appendChild(newDiv);
+    // resultDiv.appendChild(newDiv);
     newDiv.classList = "top-rated-items";
 
     const image = document.createElement("img");
@@ -35,7 +38,12 @@ function showTopResult(datas) {
     playSample.setAttribute("controls", data.previewUrl);
     playSample.appendChild(source);
     newDiv.appendChild(playSample);
+
+    topRatedArray.push(newDiv);
   });
+  for (let i = 0; i < 6; i++) {
+    resultDiv.appendChild(topRatedArray[i]);
+  }
 
   return results;
 }
@@ -126,6 +134,29 @@ function moreSearchResultsButton() {
         resultList.appendChild(resultsArray[i]);
       }
       count++;
+    }
+  });
+}
+
+let topRatedArray = [];
+let topRatedCount = 1;
+function moreTopRatedButton() {
+  let mainDiv = document.querySelector("#top-searches");
+  const childDiv = document.querySelector("#display-top-rated");
+  const button = document.querySelector("#more-toprated-button");
+  mainDiv.appendChild(childDiv);
+  childDiv.appendChild(button);
+  button.addEventListener("click", (e) => {
+    moreTopRatedButton();
+    let loopInit = 6 * topRatedCount;
+    let loopEnd = 6 * (topRatedCount + 1);
+    if (loopEnd === 66) {
+      mainDiv.innerHTML = "End of results. Search for something else.";
+    } else {
+      for (let i = loopInit; i < loopEnd; i++) {
+        resultDiv.appendChild(topRatedArray[i]);
+      }
+      topRatedCount++;
     }
   });
 }
