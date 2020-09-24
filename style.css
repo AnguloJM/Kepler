@@ -111,6 +111,7 @@ li {
   width: 100%;
   justify-content: space-between;
   max-width: 1300px;
+  color: white;
 }
 
 .top-rated-items {
@@ -173,12 +174,25 @@ li {
   padding-bottom: 75px;
 }
 
+#more-toprated {
+  width: 100%;
+}
+
 .more-results-button {
   width: 100%;
   padding-bottom: 75px;
+  padding-left: 10px;
 }
 
 .more-results-button button {
   height: 30px;
   width: 200px;
+  background: linear-gradient(
+    180deg,
+    rgba(49, 187, 172, 1) 0%,
+    rgba(1, 245, 134, 1) 100%
+  );
+  border: 1px #355058;
+  border-radius: 10px;
+  color: #355058;
 }

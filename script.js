@@ -54,7 +54,7 @@ async function fetchSearchData(userInput) {
 let resultList = document.querySelector("#top-searches");
 function showSearchResults(datas) {
   moreSearchResultsButton();
-  childArray1.length = 0;
+  resultsArray.length = 0;
   count = 1;
   let results = datas.map((data) => {
     const newDiv = document.createElement("div");
@@ -79,12 +79,12 @@ function showSearchResults(datas) {
     playSample.appendChild(source);
     newDiv.appendChild(playSample);
 
-    childArray1.push(newDiv);
+    resultsArray.push(newDiv);
   });
   for (let i = 0; i < 6; i++) {
-    resultList.appendChild(childArray1[i]);
+    resultList.appendChild(resultsArray[i]);
   }
-  // moreSearchResultsButton();
+
   return results;
 }
 
@@ -104,7 +104,7 @@ function removeResults() {
   }
 }
 
-let childArray1 = [];
+let resultsArray = [];
 let count = 1;
 function moreSearchResultsButton() {
   let mainDiv = document.querySelector("#top-searches");
@@ -116,16 +116,16 @@ function moreSearchResultsButton() {
   newDiv.appendChild(button);
   button.addEventListener("click", (e) => {
     removeResults();
+    moreSearchResultsButton();
     let loopInit = 6 * count;
     let loopEnd = 6 * (count + 1);
-    for (let i = loopInit; i < loopEnd; i++) {
-      resultList.appendChild(childArray1[i]);
+    if (loopEnd === 66) {
+      mainDiv.innerHTML = "End of results. Search for something else.";
+    } else {
+      for (let i = loopInit; i < loopEnd; i++) {
+        resultList.appendChild(resultsArray[i]);
+      }
+      count++;
     }
-    console.log(count);
-    // if (count === 9) {
-    //   newDiv.innerHTML("This better fucking work!");
-    // }
-    count++;
-    moreSearchResultsButton();
   });
 }
