@@ -132,6 +132,10 @@ li {
 .top-rated-items img {
   height: 100px;
   width: 100px;
+  border-radius: 5px;
+}
+.top-rated-items audio {
+  padding-left: 40px;
 }
 
 .searched-data {
@@ -153,6 +157,10 @@ li {
 .searched-data img {
   height: 100px;
   width: 100px;
+  border-radius: 5px;
+}
+.searched-data audio {
+  padding-left: 40px;
 }
 
 .contact-info {
@@ -160,7 +168,7 @@ li {
   padding: 20px;
 }
 
-#top-rated {
+#display-top-rated {
   width: 100%;
   padding-bottom: 75px;
 }

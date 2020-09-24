@@ -3,7 +3,6 @@ async function fetchTopResult() {
     const url = `https://itunes.apple.com/search?media=music&attribute=ratingIndex&limit=6`;
     const response = await axios.get(url);
     const data = response.data.results;
-    console.log(response.data.results);
     showTopResult(data);
   } catch (error) {
     console.log(`Error: ${error}`);
@@ -43,7 +42,7 @@ function showTopResult(datas) {
 
 async function fetchSearchData(userInput) {
   try {
-    const url = `https://itunes.apple.com/search?media=music&term=${userInput}&limit=6`;
+    const url = `https://itunes.apple.com/search?media=music&term=${userInput}&limit=60`;
     const response = await axios.get(url);
     const data = response.data.results;
     showSearchResults(data);
@@ -54,9 +53,12 @@ async function fetchSearchData(userInput) {
 
 let resultList = document.querySelector("#top-searches");
 function showSearchResults(datas) {
+  moreSearchResultsButton(); //width 100%
+  childArray1.length = 0;
+  count = 1;
   let results = datas.map((data) => {
     const newDiv = document.createElement("div");
-    resultList.appendChild(newDiv);
+    // resultList.appendChild(newDiv);
     newDiv.classList = "searched-data";
 
     const image = document.createElement("img");
@@ -77,8 +79,13 @@ function showSearchResults(datas) {
     playSample.setAttribute("controls", data.previewUrl);
     playSample.appendChild(source);
     newDiv.appendChild(playSample);
-  });
 
+    childArray1.push(newDiv);
+  });
+  for (let i = 0; i < 6; i++) {
+    resultList.appendChild(childArray1[i]);
+  }
+  // moreSearchResultsButton();
   return results;
 }
 
@@ -96,4 +103,30 @@ function removeResults() {
   while (appendElement.lastChild) {
     appendElement.removeChild(appendElement.lastChild);
   }
+}
+
+let childArray1 = [];
+let count = 1;
+function moreSearchResultsButton() {
+  let mainDiv = document.querySelector("#top-searches");
+  const newDiv = document.createElement("div");
+  mainDiv.appendChild(newDiv);
+  newDiv.classList = "more-results-button";
+  const button = document.createElement("button");
+  button.innerHTML = "More results >>";
+  newDiv.appendChild(button);
+  button.addEventListener("click", (e) => {
+    removeResults();
+    let loopInitial = 6 * count;
+    let loopEnd = 6 * (count + 1);
+    for (let i = loopInitial; i < loopEnd; i++) {
+      resultList.appendChild(childArray1[i]);
+    }
+    console.log(count);
+    // if (count === 9) {
+    //   newDiv.innerHTML("This better fucking work!");
+    // }
+    count++;
+    moreSearchResultsButton();
+  });
 }
