@@ -171,11 +171,22 @@ li {
 
 #display-top-rated {
   width: 100%;
-  padding-bottom: 75px;
+  padding-bottom: 40px;
 }
 
-#more-toprated {
-  width: 100%;
+#more-toprated-button {
+  height: 30px;
+  width: 200px;
+  background: linear-gradient(
+    180deg,
+    rgba(49, 187, 172, 1) 0%,
+    rgba(1, 245, 134, 1) 100%
+  );
+  border: 1px #355058;
+  border-radius: 10px;
+  color: #355058;
+  margin: 20px 0 -10px 5px;
+  font-size: 18px;
 }
 
 .more-results-button {
@@ -195,4 +206,5 @@ li {
   border: 1px #355058;
   border-radius: 10px;
   color: #355058;
+  font-size: 18px;
 }
