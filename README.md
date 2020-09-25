@@ -73,9 +73,9 @@ https://github.com/AnguloJM/Kepler/issues/2
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Sept 21| Project plan/approval; Pseudocode functionality | Incomplete
-|Sept 22| Core App structure (HTML, CSS, JS) | Incomplete
-|Sept 23| Complete Webpage and Test/debug | Incomplete
+|Sept 21| Project plan/approval; Pseudocode functionality | Complete
+|Sept 22| Core App structure (HTML, CSS, JS) | Complete
+|Sept 23| Complete Webpage and Test/debug | Complete
 |Sept 24| Post MVP/Styling | Incomplete
 |Sept 25| Present | Incomplete
 
@@ -89,23 +89,32 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Pseudocode | H | 2hrs| 0hrs | 0hrs |
-| CSS Styling | H | 12hrs| 0hrs | 0hrs |
-| JS functionality | H | 8hrs| 0hrs | 0hrs |
-| Post MVP work | H | 6hrs| 0hrs | 0hrs |
-| API functionality | H | 10hrs| 0hrs | 0hrs |
-| Debugging | H | 2hrs| 0hrs | 0hrs |
-| Total | H | 40hrs| 0hrs | 0hrs |
+| Pseudocode | H | 2hrs| 1hrs | 1hrs |
+| CSS Styling | H | 12hrs| 10hrs | 10hrs |
+| JS functionality | H | 08hrs| 14hrs | 14hrs |
+| Post MVP work | H | 6hrs| 8hrs | 8hrs |
+| API functionality | H | 10hrs| 3hrs | 3hrs |
+| Debugging | H | 2hrs| 4hrs | 4hrs |
+| Total | H | 40hrs| 40hrs | 40hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+button.addEventListener("click", (e) => {
+    removeResults();
+    moreSearchResultsButton();
+    let loopInit = 6 * count;
+    let loopEnd = 6 * (count + 1);
+    if (loopEnd === 66) {
+      mainDiv.innerHTML = "End of results. Search for something else.";
+    } else {
+      for (let i = loopInit; i < loopEnd; i++) {
+        resultList.appendChild(resultsArray[i]);
+      }
+      count++;
+    }
+  });
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.
+ Had to change the wireframe layout. Eliminated second page and loaded search results on the homepage. Had to make this change due to time. Would not have enough time to style second page.
