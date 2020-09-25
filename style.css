@@ -244,8 +244,7 @@ li {
     flex-direction: column;
   }
 
-  header form,
-  #search {
+  header form {
     width: 100%;
   }
 
@@ -262,10 +261,6 @@ li {
   #search {
     padding-left: 0;
     width: 100%;
-  }
-  #top-searches {
-    display: flex;
-    flex-direction: column;
   }
 
   #click {
@@ -294,7 +289,7 @@ li {
     padding-bottom: 30px;
   }
 
-  #searched-data {
+  .searched-data {
     width: 100%;
     min-height: 350px;
     height: auto;
@@ -316,5 +311,13 @@ li {
   }
   #more-toprated-button {
     margin-left: 35px;
+  }
+
+  .more-results-button {
+    margin-left: 35px;
+  }
+  #top-searches {
+    display: flex;
+    flex-direction: column;
   }
 }
