@@ -66,6 +66,7 @@ main {
   padding: 50px;
   box-sizing: border-box;
   background-color: #355058;
+  min-height: 1300px;
 }
 
 h1 {
