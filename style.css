@@ -133,12 +133,21 @@ li {
 }
 
 .top-rated-items img {
-  height: 100px;
-  width: 100px;
+  height: 135px;
+  width: 135px;
+  margin: 0 auto;
   border-radius: 5px;
 }
 .top-rated-items audio {
   padding-left: 40px;
+}
+
+.top-rated-items h3 {
+  margin: 33px auto 0 auto;
+}
+
+.top-rated-items p {
+  margin: 0 auto 65px auto;
 }
 
 .searched-data {
@@ -158,12 +167,21 @@ li {
 }
 
 .searched-data img {
-  height: 100px;
-  width: 100px;
+  height: 135px;
+  width: 135px;
   border-radius: 5px;
+  margin: 0 auto;
 }
 .searched-data audio {
   padding-left: 40px;
+}
+
+.searched-data h3 {
+  margin: 33px auto 0 auto;
+}
+
+.searched-data p {
+  margin: 0 auto 65px auto;
 }
 
 .contact-info {

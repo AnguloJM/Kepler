@@ -17,7 +17,6 @@ function showTopResult(datas) {
   topRatedCount = 1;
   let results = datas.map((data) => {
     const newDiv = document.createElement("div");
-    // resultDiv.appendChild(newDiv);
     newDiv.classList = "top-rated-items";
 
     const image = document.createElement("img");
@@ -112,14 +111,6 @@ function removeResults() {
   }
 }
 
-function removeTopRatedResults() {
-  const topRatedItems = document.querySelector("#display-top-rated"); //topRatedItems.remove()
-  while (topRatedItems.lastChild) {
-    //delete
-    topRatedItems.removeChild(topRatedItems.lastChild);
-  }
-}
-
 let resultsArray = [];
 let count = 1;
 function moreSearchResultsButton() {
@@ -127,6 +118,7 @@ function moreSearchResultsButton() {
   const newDiv = document.createElement("div");
   mainDiv.appendChild(newDiv);
   newDiv.classList = "more-results-button";
+
   const button = document.createElement("button");
   button.innerHTML = "More results >>";
   newDiv.appendChild(button);
@@ -153,8 +145,10 @@ function moreTopRatedButton() {
   const newDiv = document.createElement("div");
   mainDiv.appendChild(newDiv);
   newDiv.classList = "top-rated-home";
+
   const title = document.createElement("h2");
   title.innerText = "Top Rated:";
+
   const button = document.createElement("button");
   button.innerHTML = "More results >>";
   newDiv.appendChild(title);
