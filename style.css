@@ -113,7 +113,6 @@ li {
   justify-content: space-between;
   max-width: 1300px;
   color: white;
-  /* font-size: 30px; */
 }
 
 .top-rated-items {
@@ -216,11 +215,54 @@ li {
     padding: 0;
     margin: 0;
   }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header form,
+  #search {
+    width: 100%;
+  }
+
   main {
     box-sizing: border-box;
     width: 100%;
   }
+
+  #search-form {
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  #search {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  #click {
+    top: 182px;
+  }
+
+  .top-rated-items {
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+  }
+  .top-rated-items img {
+    padding-bottom: 30px;
+  }
   .top-rated-items h3 {
-    font-size: 50px;
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+  .top-rated-items p {
+    padding-bottom: 30px;
+  }
+  .top-rated-items audio {
+    padding-left: 10px;
+    width: 220px;
+    padding-bottom: 30px;
   }
 }
