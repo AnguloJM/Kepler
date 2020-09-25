@@ -112,6 +112,14 @@ function removeResults() {
   }
 }
 
+function removeTopRatedResults() {
+  const topRatedItems = document.querySelector("#display-top-rated"); //topRatedItems.remove()
+  while (topRatedItems.lastChild) {
+    //delete
+    topRatedItems.removeChild(topRatedItems.lastChild);
+  }
+}
+
 let resultsArray = [];
 let count = 1;
 function moreSearchResultsButton() {
@@ -142,11 +150,18 @@ let topRatedArray = [];
 let topRatedCount = 1;
 function moreTopRatedButton() {
   let mainDiv = document.querySelector("#top-searches");
-  const childDiv = document.querySelector("#display-top-rated");
-  const button = document.querySelector("#more-toprated-button");
-  mainDiv.appendChild(childDiv);
-  childDiv.appendChild(button);
+  const newDiv = document.createElement("div");
+  mainDiv.appendChild(newDiv);
+  newDiv.classList = "top-rated-home";
+  const title = document.createElement("h2");
+  title.innerText = "Top Rated:";
+  const button = document.createElement("button");
+  button.innerHTML = "More results >>";
+  newDiv.appendChild(title);
+  newDiv.appendChild(button);
+  button.setAttribute("id", "more-toprated-button");
   button.addEventListener("click", (e) => {
+    removeResults();
     moreTopRatedButton();
     let loopInit = 6 * topRatedCount;
     let loopEnd = 6 * (topRatedCount + 1);

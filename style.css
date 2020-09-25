@@ -51,6 +51,7 @@ body {
   );
   flex-direction: column;
   min-height: 100vh;
+  font-family: "Work Sans", sans-serif;
 }
 
 header,
@@ -112,6 +113,7 @@ li {
   justify-content: space-between;
   max-width: 1300px;
   color: white;
+  /* font-size: 30px; */
 }
 
 .top-rated-items {
@@ -169,7 +171,7 @@ li {
   padding: 20px;
 }
 
-#display-top-rated {
+.top-rated-home {
   width: 100%;
   padding-bottom: 40px;
 }
@@ -207,4 +209,18 @@ li {
   border-radius: 10px;
   color: #355058;
   font-size: 18px;
+}
+
+@media (max-width: 375px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  main {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .top-rated-items h3 {
+    font-size: 50px;
+  }
 }
