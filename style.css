@@ -229,6 +229,10 @@ li {
   font-size: 18px;
 }
 
+.bottom-logo h3 {
+  font-size: 30px;
+}
+
 @media (max-width: 375px) {
   * {
     padding: 0;
@@ -259,6 +263,10 @@ li {
     padding-left: 0;
     width: 100%;
   }
+  #top-searches {
+    display: flex;
+    flex-direction: column;
+  }
 
   #click {
     top: 182px;
@@ -269,19 +277,44 @@ li {
     min-height: 350px;
     height: auto;
   }
-  .top-rated-items img {
-    padding-bottom: 30px;
-  }
+
   .top-rated-items h3 {
     font-size: 30px;
     padding-bottom: 30px;
+    text-align: center;
   }
   .top-rated-items p {
     padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 20px;
   }
   .top-rated-items audio {
-    padding-left: 10px;
+    padding-left: 27px;
     width: 220px;
     padding-bottom: 30px;
+  }
+
+  #searched-data {
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+  }
+  .searched-data h3 {
+    font-size: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .searched-data p {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 20px;
+  }
+  .searched-data audio {
+    padding-left: 27px;
+    width: 220px;
+    padding-bottom: 30px;
+  }
+  #more-toprated-button {
+    margin-left: 35px;
   }
 }
