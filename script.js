@@ -1,6 +1,6 @@
 async function fetchTopResult() {
   try {
-    const url = `https://itunes.apple.com/search?media=music&attribute=ratingIndex&limit=60`;
+    const url = `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?media=music&attribute=ratingIndex&limit=60`;
     const response = await axios.get(url);
     const data = response.data.results;
     showTopResult(data);
@@ -49,7 +49,7 @@ function showTopResult(datas) {
 
 async function fetchSearchData(userInput) {
   try {
-    const url = `https://itunes.apple.com/search?media=music&term=${userInput}&limit=60`;
+    const url = `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?media=music&term=${userInput}&limit=60`;
     const response = await axios.get(url);
     const data = response.data.results;
     showSearchResults(data);
