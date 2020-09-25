@@ -1,3 +1,4 @@
+// Grabs Top Rated Info and limits to 60 results
 async function fetchTopResult() {
   try {
     const url = `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?media=music&attribute=ratingIndex&limit=60`;
@@ -9,7 +10,7 @@ async function fetchTopResult() {
   }
 }
 fetchTopResult();
-
+// This function creates elements and displays the the info tanken from the api and pushed into the topRatedArray
 let resultDiv = document.querySelector("#top-searches");
 function showTopResult(datas) {
   moreTopRatedButton();
@@ -46,7 +47,7 @@ function showTopResult(datas) {
 
   return results;
 }
-
+// Grabs the info from api based on user input, limits to 60 results
 async function fetchSearchData(userInput) {
   try {
     const url = `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?media=music&term=${userInput}&limit=60`;
@@ -57,7 +58,7 @@ async function fetchSearchData(userInput) {
     console.log(`Error: ${error}`);
   }
 }
-
+// creates elements, passes api info into the elements and pushed into resultsArray
 let resultList = document.querySelector("#top-searches");
 function showSearchResults(datas) {
   moreSearchResultsButton();
@@ -94,7 +95,7 @@ function showSearchResults(datas) {
 
   return results;
 }
-
+// creates search form passes user input
 const form = document.querySelector("#search-form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -103,14 +104,14 @@ form.addEventListener("submit", (e) => {
   document.querySelector("#search").value = "";
   fetchSearchData(inputValue);
 });
-
+//removes current content on page
 function removeResults() {
   const appendElement = document.querySelector("#top-searches");
   while (appendElement.lastChild) {
     appendElement.removeChild(appendElement.lastChild);
   }
 }
-
+// created more results button for searched info and passes info through the results array
 let resultsArray = [];
 let count = 1;
 function moreSearchResultsButton() {
@@ -137,7 +138,7 @@ function moreSearchResultsButton() {
     }
   });
 }
-
+// created more results button for topRated info and passes info through the topRatedArray
 let topRatedArray = [];
 let topRatedCount = 1;
 function moreTopRatedButton() {
